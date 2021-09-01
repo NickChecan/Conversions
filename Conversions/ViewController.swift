@@ -63,7 +63,9 @@ class ViewController: UIViewController {
             default:
                 calcDistance()
         }
-
+        view.endEditing(true)
+        let result = Double(lbResult.text!)!
+        lbResult.text = String (format: "%.2f", result)
     }
     
     func calcTemperature() {
